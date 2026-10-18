@@ -22,7 +22,7 @@ body{margin:0;background:#E9EBEE;color:var(--ink);font:17px/1.5 "Barlow",Arial,H
 .band h1{margin:0;font-size:clamp(24px,4vw,34px);font-weight:700;letter-spacing:.2px}
 .band .sub{font-size:14px;opacity:.85;margin-top:2px}
 .content{padding:24px max(20px,env(safe-area-inset-left)) 32px max(20px,env(safe-area-inset-right));display:flex;flex-direction:column;gap:28px}
-.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch}
+.hero{display:block}
 @media (max-width:720px){.hero{grid-template-columns:1fr}}
 .hero img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block}
 .goal{display:flex;flex-direction:column;gap:12px}
@@ -83,7 +83,6 @@ textarea{width:100%;min-height:160px;font:14px/1.45 Consolas,Menlo,monospace;bor
 
   <div class="content">
     <div class="hero">
-      <img src="img/cafe-hero.png" alt="Guests in a small café" onerror="this.onerror=null;this.src='https://d8j0ntlcm91z4.cloudfront.net/user_3HsN8chfkPCULqVi87Qzv3wNnjf/hf_20261018_185745_ef7d6575-9d02-4c20-b704-bf874abff1f4.png'">
       <div class="goal">
         <div class="redbox">Your task:</div>
         <div class="greybox">A café asked 300 guests to rate six statements from 1 (disagree) to 7 (agree). Some answers move together. Find out <b>why</b>.</div>
@@ -111,8 +110,8 @@ textarea{width:100%;min-height:160px;font:14px/1.45 Consolas,Menlo,monospace;bor
       <div id="factors" hidden>
         <p style="margin-top:14px;font-weight:600">The answers move together because two things you cannot measure directly sit behind them.</p>
         <div class="factors">
-          <div class="fac a"><img src="img/coffee.png" alt="Barista pouring coffee" onerror="this.onerror=null;this.src='https://d8j0ntlcm91z4.cloudfront.net/user_3HsN8chfkPCULqVi87Qzv3wNnjf/hf_20261018_185746_6376c9a4-f7e1-4d8b-9e5a-d12222c1340b.png'"><div class="cap"><h3>Factor A: Coffee quality</h3><ul id="fa"></ul></div></div>
-          <div class="fac b"><img src="img/atmosphere.png" alt="Cozy café corner" onerror="this.onerror=null;this.src='https://d8j0ntlcm91z4.cloudfront.net/user_3HsN8chfkPCULqVi87Qzv3wNnjf/hf_20261018_185745_334a7055-7e19-4c67-8f64-b737db6d365f.png'"><div class="cap"><h3>Factor B: Atmosphere</h3><ul id="fb"></ul></div></div>
+          <div class="fac a"><div class="cap"><h3>Factor A: Coffee quality</h3><ul id="fa"></ul></div></div>
+          <div class="fac b"><div class="cap"><h3>Factor B: Atmosphere</h3><ul id="fb"></ul></div></div>
         </div>
         <label class="switch"><input type="checkbox" id="off"> Imagine the coffee quality did not matter to anyone</label>
         <div class="msg ok" id="offmsg">Tick the box and watch the table above.</div>
@@ -138,7 +137,7 @@ textarea{width:100%;min-height:160px;font:14px/1.45 Consolas,Menlo,monospace;bor
         <div><b>Test them</b>Structural equation models: do the factors drive what customers do?</div>
         <div><b>Decide</b>Conjoint analysis and simulation: what should the company change?</div>
       </div>
-      <p class="muted" style="margin-top:12px;font-size:14px">Data simulated for teaching. Photos generated for this exercise.</p>
+      <p class="muted" style="margin-top:12px;font-size:14px">Data simulated for teaching.</p>
     </section>
   </div>
 
